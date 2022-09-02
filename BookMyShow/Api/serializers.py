@@ -1,7 +1,17 @@
 from rest_framework import serializers 
-from .models import Movie
-
+from .models import Movie, MovieShow, Theatre
 class MovieSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
-        fields = ['name','movie_type','director','language','run_length','trailer','image']
+        fields = '__all__'
+
+class TheatreSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Theatre
+        fields = '__all__'
+
+class ShowSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MovieShow
+        fields = '__all__'
+
