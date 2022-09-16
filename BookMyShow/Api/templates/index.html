@@ -7,7 +7,7 @@
     <meta name="viewport" content="width= , initial-scale=1.0">
     <title>Document</title>
     <style>
-        .demo{
+        .image{
             height: 80px;
             width: 90px;
         }
@@ -23,9 +23,9 @@
         </tr>
         {% for x in data %}
             <tr>
-                <td><a href="/moviedetail/{{x.id}}">{{x.name}}</a></td>
+                <td><a href="/moviedetail/{{x.id}}"> {{x.name}}</a></td>
                 <td>{{x.language}}</td>
-                <td><a href="/moviedetail/{{x.id}}"><img src="media/{{x.image}}" class="demo"></a></td>
+                <td><a href="/moviedetail/{{x.id}}"><img src="{{x.image}}" class="image"></a></td>
             </tr>
         {% endfor %}
     </table>    

@@ -1,3 +1,4 @@
+{% load rest_framework %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- <script>
+        function myFunction() {
+            document.getElementById('seat1').disabled = true;
+        }
+    </script> -->
 </head>
 <body>
-    <table>
-        {% for row in range(5) %}
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            {% render_form serializer %}
             <tr>
-                for col in range
+                <td colspan="2"><input type="submit" value="save" name="save"></td>
             </tr>
-    </table>
+        </table>
+        <!-- {{serializer.seat}} -->
+    </form>
+    
+    
 </body>
 </html>

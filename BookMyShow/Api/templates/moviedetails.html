@@ -26,13 +26,13 @@
         <div class="col-md-auto align-items-center" style="margin-left: 20px;">
             <div class="row g-0 border rounded row-md-auto"  id="page-set">
                 <div class="col p-4 d-flex flex-column position-static">
-                    <img src="/media/{{data.image}}" class="image-set" alt="">
+                    <img src="{{data.image}}" class="image-set" alt="">
                     <h4 class="mb-0">Title : {{data.name}}</h4>    
                     <h6 class="mb-0">{{data.movie_type}}</h6>
                     <p class="card-text mb-auto">director : {{data.director}}</p>
                     <div class="mb-1 text-muted">{{data.language}}</div>
                 </div> 
-                <a href="/theatre">Book Now</a>
+                <a href="/theatre/{{data.id}}">Book Now</a>
             </div>
         </div>
     </div>
